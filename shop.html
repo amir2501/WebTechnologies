@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="./shop.css">
+    <!--    link for fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<main>
+    <nav id="nav">
+        <ul>
+            <li>
+                <h1>
+                    Ideal
+                </h1>
+            </li>
+            <li>
+                <a href="./index.html">home</a>
+                <a href="#">Shop</a>
+                <a href="./about.html">about</a>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="categories">
+        <h2>
+            Categories
+        </h2>
+
+        <ul class="container">
+            <li class="woman">
+                <span>Women</span>
+            </li>
+            <li class="man">
+                <span>Man</span>
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="shop">
+        <ul>
+            <li id="woman">
+                <h2>Women</h2>
+                <ul>
+                    <li class="item"><img src="./kendall-black-dress.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Dress</h3>
+                            <p>This is the best choice because this contains the natural meterails and designed in italy
+                                by
+                                the most known artists. For this particular clothe Silk from China and Uzbekistan was
+                                imported. This clothe fabricated in France and shown in many modeling poses</p>
+                            <div class="buy">
+                                <p>Price: <span>$499</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><img src="./kendall-suit.jpg" alt="suit for women">
+                        <div class="text">
+                            <h3>Suit</h3>
+                            <p>This suit made for people with essential requierments and can be combined with different
+                                types of clothes. This is modern and also minimalitic style.</p>
+                            <div class="buy">
+                                <p>Price: <span>$599</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><img src="./white-dress.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Sundress</h3>
+                            <p>Our sundress provides with the best material and unique style. although it is in
+                                classical way it also look astonishing and adorable. Minimalistic design gives it's own
+                                vibe.</p>
+                            <div class="buy">
+                                <p>Price: <span>$199</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><img src="./dinning-dress.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Cocktail Dress</h3>
+                            <p>One of the best looking and astonishing dresses in the world. Made by elite France
+                                Designers. Produced in Italy in Gucci Home. Ideal for dinners outside and creates the
+                                best first expression at first sight.</p>
+                            <div class="buy">
+                                <p>Price: <span>$$699</span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+            <li id="man">
+                <h2>Men</h2>
+                <ul>
+                    <li class="item">
+                        <img src="./siut-m.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Suit</h3>
+                            <p>This is the best choice because this contains the natural meterails and designed in italy
+                                by
+                                the most known artists. For this particular clothe Silk from China and Uzbekistan was
+                                imported. This clothe fabricated in France and shown in many modeling poses</p>
+                            <div class="buy">
+                                <p>Price: <span>$xxx</span></p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="item"><img src="./jacket.jpeg" alt="suit for women">
+                        <div class="text">
+                            <h3>Jacket</h3>
+                            <p>In order to show Muscular forms of the man's body we designed this jacket. Because of
+                                brutality design jacket can give a vibe of 90's and This jacket last longer than any
+                                other jacket.</p>
+                            <div class="buy">
+                                <p>Price: <span>$499</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><img src="./sweater.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Sweater</h3>
+                            <p>Designed by Italian the female designers this sweater attracts woman as a magnit. This
+                                sweater has unique color which puts you in pick of popularity.</p>
+                            <div class="buy">
+                                <p>Price: <span>$399</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><img src="./shirt.jpeg" alt="dress for women">
+                        <div class="text">
+                            <h3>Shirt</h3>
+                            <p>Shirt for basic bussiness mettings and for causal wearing. Can be combined with other out
+                                Clothes such as sweater and suits.</p>
+                            <div class="buy">
+                                <p>Price: <span>$99</span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<script>
+    const manElement = document.querySelector(".man");
+    const womanElement = document.querySelector(".woman");
+
+    function redirectTo(hash) {
+        window.location.hash = '/';
+        window.location.hash = hash;
+    }
+
+    womanElement.addEventListener('click', () => {
+        redirectTo("#woman")
+    });
+    manElement.addEventListener('click', () => {
+        redirectTo("#man")
+    });
+</script>
+</body>
+</html>

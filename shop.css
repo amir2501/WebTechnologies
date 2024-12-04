@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 24, 33, 0.82);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    padding: 1rem;
+    z-index: 4;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            list-style: none;
+
+            h1, a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: #FFFAE5;
+                text-transform: capitalize;
+            }
+
+            a {
+                padding: 0 0.5rem
+            }
+        }
+    }
+
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body main section#categories {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    h2 {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        min-height: 80vh;
+        min-width: 100vw;
+
+        .man, .woman {
+            border-radius: 10px;
+            list-style: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 40vw;
+            height: 60vh;
+            position: relative;
+            /*transition: background-size 0.1s ease-in-out, background-position 0.1s ease-in-out, opacity 0.1s linear;*/
+
+            span {
+                position: absolute;
+                background-color: #FDFFFF;
+                padding: 1.5rem;
+                bottom: 0;
+                border-top-right-radius: 10px;
+                transition: all 0.6s;
+                animation: span-animation 0.4s ease-in-out;
+            }
+        }
+
+        .man:hover, .woman:hover {
+            cursor: pointer;
+            transform: scale(0.96);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+
+            span {
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+                background-color: rgba(27, 24, 33, 0.82);
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #FDFFFF;
+                transition: all 0.5s;
+                animation: span-animation 0.4s ease-in-out;
+            }
+        }
+
+        .man, .woman, .man:hover, .woman:hover {
+            transition: background-size 0.4s ease-in-out, background-position 0.4s ease-in-out, opacity 0.4s linear, transform 0.4s ease-in-out;
+
+        }
+
+        .woman {
+            background-image: url("./kendall-main.jpeg");
+        }
+
+        .man {
+            background-image: url("./jony-dep-young.jpeg");
+        }
+
+
+    }
+}
+
+body main section#shop {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #FAFAFA;
+    padding-bottom: 2rem;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        width: 80%;
+
+        li {
+            list-style: none;
+            margin-top: 1.5rem;
+
+
+            h2 {
+                font-size: 2.5rem;
+                margin: 1rem 0;
+                font-weight: bold;
+                border-bottom: #222D52 1px solid;
+            }
+
+            img {
+                max-width: 25vw;
+                max-height: 40vw;
+                object-fit: cover;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-right: 1rem;
+            }
+
+            h3 {
+                padding-top: 2rem;
+                text-transform: capitalize;
+                font-size: 1.4rem;
+                text-align: center;
+                color: #d2d2d2;
+                transition: color 0.1s ease, font-style 0.1s ease;
+            }
+
+            ul li {
+                display: flex;
+                flex-direction: row;
+                background-color: #8e8e8e;
+                border-radius: 10px;
+                transition: background-color 0.3s ease;
+                padding-right: 2rem;
+            }
+
+            .text {
+                p {
+                    padding-top: 2rem;
+                    font-size: 1.5rem;
+
+                    span {
+                        font-style: italic;
+                        color: #FDFFFF;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body main section#categories {
+        .container {
+            flex-direction: column;
+            padding-bottom: 2rem;
+            flex-wrap: wrap;
+
+            li {
+                min-width: 80%;
+
+                .woman, .man {
+                    span {
+                        background-color: black;
+                        padding: 2rem;
+                        font-size: 1.5rem;
+                        bottom: -2%;
+                        left: -2%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    body main section#shop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ul{
+            padding: 0;
+            li{
+                ul{
+                    li{
+                        flex-direction: column;
+                        width: 80vw;
+                        padding: 0;
+
+                        img{
+                            width: 100%;
+                            height: 50vh;
+                            max-height: 100vh;
+                            max-width: 100vw;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .text{
+                            padding: 1rem 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

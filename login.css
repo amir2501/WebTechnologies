@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #122620;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    border-radius: 10px;
+    display: flex;
+    max-width: 80vw;
+    max-height: 60vh;
+    background-color:#FDFFFF ;
+
+    form, img {
+        flex: 1;
+        max-height: 100vh;
+        object-fit: cover;
+    }
+    img{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+    min-width: 50%;
+    }
+
+    input {
+        padding: 0.5rem 1rem;
+        border: none;
+        background: #313128;
+        color: #F4EBD0;
+        border-radius: 10px;
+    }
+
+    label {
+        color: #df9f3d;
+    }
+
+    button{
+        border: none;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #D6AD60;
+    }
+}

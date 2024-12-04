@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FFFEF2;
+
+}
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 24, 33, 0.82);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    padding: 1rem;
+    z-index: 4;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            list-style: none;
+
+            h1, a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: #FFFAE5;
+                text-transform: capitalize;
+            }
+
+            a {
+                padding: 0 0.5rem
+            }
+        }
+    }
+
+}
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .text{
+        padding-left: 2rem;
+        max-width: 50vw;
+
+        h1{
+            font-size: 3rem;
+            color: #D6AD60;
+        }
+
+        p{
+            margin-bottom: 2rem;
+
+        }
+
+        a{
+            text-decoration: none;
+            color: #D6AD60;
+            padding: 0.5rem 1rem;
+            background-color: #091235;
+            border-radius: 0.2rem;
+            text-transform: uppercase;
+        }
+    }
+    img{
+        width: 50vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main section{
+        flex-direction: column;
+
+        .text, img{
+            max-width: 80vw;
+            padding:0;
+        }
+
+        img{
+            width: 100vw;
+            height: 100%;
+            margin-top: 2rem;
+        }
+    }
+}
