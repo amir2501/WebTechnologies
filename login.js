@@ -1,26 +1,44 @@
 const form = document.querySelector('#form');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
+const repeatPassword = document.querySelector('#password-re-type');
+const selectedGender = document.querySelector('input[name="gender"]:checked');
+const userName = document.querySelector('#userName');
 
-let allUsers = {
-    'test@example.com': '1111',
-    'amirbekerkinov62@example.com': '1111',
-};
+let Storage = [];
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const enteredEmail = email.value.trim();
-    const enteredPassword = password.value;
+    !email.value ? email.classList.add("error") : email.classList.remove("error");
+    !password.value ? password.classList.add("error") : password.classList.remove("error");
+    !repeatPassword.value ? repeatPassword.classList.add("error") : repeatPassword.classList.remove("error");
+    !userName.value ? userName.classList.add("error") : userName.classList.remove("error");
 
-    if (allUsers[enteredEmail] && allUsers[enteredEmail] === enteredPassword) {
-        alert('Login successful!');
-        window.location.href = '/';
-        // Perform additional actions after successful login
-    } else {
-        alert('Invalid email or password.');
-        // Optionally, you can clear the password field or give focus back to the email field
-        password.value = '';
-        email.focus();
+    if (email.value && password.value && repeatPassword.value && userName.value) {
+        if (password.length < 6) return alert("Password must be 6 characters long");
+        else {
+            if (password.value === repeatPassword.value) {
+                if (userName.value > 4) {
+                    const obj = {
+                        email: email.value,
+                        password: password.value,
+                        createdDate: Date.now(),
+                        gender: selectedGender.value ?? "N/A"
+                    }
+                    Storage.push(obj);
+                } else {
+                    userName.classList.add("error");
+                }
+                password.classList.remove("error");
+                repeatPassword.classList.remove("error");
+            } else {
+                alert("please recheck your passwords")
+                password.classList.add("error")
+                repeatPassword.classList.add("error")
+            }
+        }
+
     }
 });

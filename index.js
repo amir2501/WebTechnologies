@@ -149,3 +149,4 @@ if (window.innerWidth < 1000) {
         mobileNav.classList.toggle("hidden");
     })
 }
+

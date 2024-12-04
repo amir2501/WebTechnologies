@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
     <link rel="stylesheet" href="./about.css">
-    <!--    link for fonts-->
+    <link rel="stylesheet" href="./nav.css">
+
+    <!--    link for google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
@@ -15,20 +17,44 @@
 </head>
 <body>
 <main>
-    <nav id="nav">
-        <ul>
+    <nav class=" " id="nav">
+        <ul class="desktop">
             <li>
                 <h1>
                     Ideal
                 </h1>
             </li>
             <li>
-                <a href="/">home</a>
+                <a href="./index.html">home</a>
                 <a href="./shop.html">Shop</a>
-                <a href="#">about</a>
+                <a href="./about.html">about</a>
                 <a href="./contact.html">Contact</a>
+                <a href="./blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="./login.html">register</a>
             </li>
         </ul>
+
+        <ul class="mobile">
+            <li>
+                <h1>
+                    Ideal
+                </h1>
+            </li>
+            <li>
+                <button id="hamburger">Menu</button>
+            </li>
+        </ul>
+        <div class=" hidden" id="drop-down">
+            <a href="./index.html">home</a>
+            <a href="./shop.html">Shop</a>
+            <a href="./about.html">about</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./login.html">login</a>
+        </div>
     </nav>
 
     <section>
@@ -97,6 +123,6 @@
     </ul>
 </footer>
 
-
+<script src="./nav-control.js"></script>
 </body>
 </html>

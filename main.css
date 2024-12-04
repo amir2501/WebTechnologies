@@ -12,6 +12,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body p#info{
+    position: absolute;
+    text-align: center;
+    background-color: #091235;
+    color: #D6AD60;
+    width: 100vw;
+}
+
 .mobile, .overlay {
     display: none;
 }

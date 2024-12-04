@@ -8,7 +8,9 @@
     <title>Shop</title>
 
     <link rel="stylesheet" href="./shop.css">
-    <!--    link for fonts-->
+    <link rel="stylesheet" href="./nav.css">
+
+    <!--    link for google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
@@ -16,8 +18,8 @@
 </head>
 <body>
 <main>
-    <nav id="nav">
-        <ul>
+    <nav class=" " id="nav">
+        <ul class="desktop">
             <li>
                 <h1>
                     Ideal
@@ -25,11 +27,35 @@
             </li>
             <li>
                 <a href="./index.html">home</a>
-                <a href="#">Shop</a>
+                <a href="./shop.html">Shop</a>
                 <a href="./about.html">about</a>
                 <a href="./contact.html">Contact</a>
+                <a href="./blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="./login.html">register</a>
             </li>
         </ul>
+
+        <ul class="mobile">
+            <li>
+                <h1>
+                    Ideal
+                </h1>
+            </li>
+            <li>
+                <button id="hamburger">Menu</button>
+            </li>
+        </ul>
+        <div class=" hidden" id="drop-down">
+            <a href="./index.html">home</a>
+            <a href="./shop.html">Shop</a>
+            <a href="./about.html">about</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./login.html">login</a>
+        </div>
     </nav>
 
     <section id="categories">
@@ -58,10 +84,10 @@
                             <h3>Dress</h3>
                             <p>This is the best choice because this contains the natural meterails and designed in italy
                                 by
-                                the most known artists. For this particular clothe Silk from China and Uzbekistan was
-                                imported. This clothe fabricated in France and shown in many modeling poses</p>
+                                the most known artists. For this particular clothe <em>Silk</em> from China and Uzbekistan was
+                                imported. This clothe fabricated in <em>France</em> and shown in many modeling poses</p>
                             <div class="buy">
-                                <p>Price: <span>$499</span></p>
+                                <p>Price: <span><del>$599</del> <ins>$499</ins></span></p>
                             </div>
                         </div>
                     </li>
@@ -198,5 +224,6 @@
         redirectTo("#man")
     });
 </script>
+<script src="./nav-control.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
     <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="./nav.css">
 
     <!--    link for google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,20 +17,44 @@
 </head>
 <body>
 <main>
-    <nav id="nav">
-        <ul>
+    <nav class="nav-hidden " id="nav">
+        <ul class="desktop">
             <li>
                 <h1>
                     Ideal
                 </h1>
             </li>
             <li>
-                <a href="/">home</a>
+                <a href="./index.html">home</a>
                 <a href="./shop.html">Shop</a>
                 <a href="./about.html">about</a>
                 <a href="./contact.html">Contact</a>
+                <a href="./blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="./login.html">register</a>
             </li>
         </ul>
+
+        <ul class="mobile">
+            <li>
+                <h1>
+                    Ideal
+                </h1>
+            </li>
+            <li>
+                <button id="hamburger">Menu</button>
+            </li>
+        </ul>
+        <div class=" hidden" id="drop-down">
+            <a href="./index.html">home</a>
+            <a href="./shop.html">Shop</a>
+            <a href="./about.html">about</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./login.html">login</a>
+        </div>
     </nav>
 
     <section>
@@ -66,7 +91,32 @@
 
         <img src="./old-money-woman.jpeg" alt="">
     </article>
+    <section id="table-section">
+        <h2>Last 3 month Income and Customer Satisfaction:</h2>
+        <table>
+            <tr>
+                <th><em>Month</em></th>
+                <th>Income</th>
+                <th>Customer Satisfaction</th>
+            </tr>
+            <tr>
+                <td>September</td>
+                <td>$10,000</td>
+                <td>95%</td>
+            </tr>
+            <tr>
+                <td>October</td>
+                <td>$23,000</td>
+                <td>98%</td>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td>$20,000</td>
+                <td>99%</td>
+            </tr>
+        </table>
 
+    </section>
 
 </main>
 
@@ -97,6 +147,6 @@
     </ul>
 </footer>
 
-
+<script src="./nav-control.js"></script>
 </body>
 </html>
